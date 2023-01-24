@@ -1,0 +1,65 @@
+html,input{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 2em;
+}
+header{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;    
+    /*can we use text-align: center; insetad?*/
+    background-color: tomato;
+    border: 1px solid tomato;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+form{
+    margin: 50px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 2%;
+}
+div{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Why is this use */
+}
+label, input, button{
+    font-size: 16px;
+    line-height: 1.5;
+}
+label{
+    text-align: left;
+    width: 40%;
+    margin-left: 2%;
+}
+input{
+    flex: auto;
+    border-radius: 5px;
+}
+input:hover{
+    border: 2px solid orange;
+}
+button{
+    width: 70%;
+    margin: 0 auto;
+    background-color:teal;
+    border-radius: 5px;
+}
+button:hover{
+    border: 2px solid red;
+    color: red;
+    background-color: rgb(161, 176, 211);
+}
+error-output{
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}

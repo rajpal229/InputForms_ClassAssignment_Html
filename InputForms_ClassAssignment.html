@@ -11,14 +11,19 @@
     <form>
         <header>Fill the form</header>
         <div>
-            <label for="text">Enter Username here &#8658; </label>
-            <input type="text" placeholder="enter name here" id="text" name="text"  required>
+            <label for="text">Enter Username here &ensp;&#8658; </label>
+            <input type="text" placeholder="enter name here" id="text" name="text" title="Enter First Name Capital" required>
             <error-output class="text-error" for="text"></error-output>
         </div>
         <div>
-            <label for="email">email input type: &emsp;&ensp; &#8658;</label>
-            <input type="email" placeholder="enter email here" id="email" name="email" required>
-            <error-output class="email-error" for="text"></error-output>
+            <label for="email">Enter email here &emsp;&emsp;&nbsp; &#8658;</label>
+            <input type="email" placeholder="enter email here" id="email" name="email" title="Enter email of required pattern" required>
+            <error-output class="email-error" for="email"></error-output>
+        </div>
+        <div>
+            <label for="tel">Enter Mobile Number&nbsp; &#8658;</label>
+            <input type="tel" placeholder="enter phone here" id="tel" name="tel" title="Enter space between Country-Code and Phone-Number" required>
+            <error-output class="tel-error" for="tel"></error-output>
         </div>
         <div>
             <button type="submit">Submit</button>
@@ -43,6 +48,15 @@
                 emailError.textContent = "";
             else
                 emailError.textContent = "Email is Incorrect";
+        });
+        const tel = document.querySelector('#tel');
+        const telError = document.querySelector('.tel-error');
+        tel.addEventListener('input', function () {
+            let nameRegextel = RegExp('^[0-9]{2,3}[ ][0-9]{10}$');
+            if (nameRegextel.test(tel.value))
+                telError.textContent = "";
+            else
+                telError.textContent = "tel is Incorrect";
         });
     </script>
 </body>

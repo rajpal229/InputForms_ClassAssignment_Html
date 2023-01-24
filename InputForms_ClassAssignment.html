@@ -16,6 +16,11 @@
             <error-output class="text-error" for="text"></error-output>
         </div>
         <div>
+            <label for="email">email input type: &emsp;&ensp; &#8658;</label>
+            <input type="email" placeholder="enter email here" id="email" name="email" required>
+            <error-output class="email-error" for="text"></error-output>
+        </div>
+        <div>
             <button type="submit">Submit</button>
         </div>
     </form>
@@ -28,6 +33,16 @@
                 textError.textContent = "";
             else
                 textError.textContent = "Name is Incorrect";
+        });
+
+        const email = document.querySelector('#email');
+        const emailError = document.querySelector('.email-error');
+        email.addEventListener('input', function () {
+            let nameRegexemail = RegExp('^[a-z0-9]+([.][0-9a-z])?[@][0-9a-z]+.[0-9a-z]{2,3}(.[0-9a-z]{2})?$');
+            if (nameRegexemail.test(email.value))
+                emailError.textContent = "";
+            else
+                emailError.textContent = "Email is Incorrect";
         });
     </script>
 </body>
